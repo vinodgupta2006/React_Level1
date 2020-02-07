@@ -1,0 +1,25 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    background-image: url("../../assets/images/login.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100% 0 0 0;
+}
+
+.text-block {
+    position: absolute;
+    bottom: 50%;
+    right: 45%;
+    width: 20%;
+}
+
+.heading{
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
