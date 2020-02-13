@@ -1,0 +1,31 @@
+$backGrounColor: #292D39;
+
+.header {
+  // overflow: hidden;
+  background-color: $backGrounColor;
+  z-index: 1;
+
+  position: fixed;
+  width: 100%;
+
+  &__logo{
+    padding: 1%;
+  }
+
+  &__right {
+    position: absolute;
+    left: 89%;
+    top: 15%
+  }
+
+  &__roundlogo{
+    right: 50%;
+    width: 35%;
+    position: relative;
+  }
+
+  &__dropdown{
+    bottom: 40px;
+    background-color: $backGrounColor !important;
+  }
+}

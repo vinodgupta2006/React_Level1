@@ -4,10 +4,10 @@ import Button from 'react-bootstrap/Button';
 const button = (props) =>{
     
     return <Button 
-                variant={props.variant} 
                 type={props.type}
                 className={props.className}
                 onClick={props.onClick}
+                {...props}
             >
                 {props.name}
             </Button>;

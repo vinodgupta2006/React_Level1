@@ -1,0 +1,20 @@
+@import '../../assets/theme/color';
+
+.dashboard{
+    text-align: left;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+    color: $color-secondary;
+    opacity: 1;
+    margin-bottom: 9%;
+    
+    position: relative;
+    top: 75px;
+
+    &__charttitle{
+        color: $color-ternery;
+        font-size: 15px;
+    }
+}
+

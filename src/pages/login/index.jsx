@@ -12,6 +12,10 @@ class Login extends React.Component{
         }
     }
 
+    componentDidMount(){
+        document.body.classList.add('login__img');
+    }
+
     onChange = ( event ) => {
         const { value, name } = event.currentTarget;
         this.setState( { [ name ]: value } );
@@ -22,7 +26,9 @@ class Login extends React.Component{
         const isValidEmail = this.onValidation(email)
         const isValidPsw = this.onValidation(password)
         if(isValidEmail && isValidPsw){
-            this.props.history.push("/dashboard");
+            document.body.classList.remove('login__img');
+            window.localStorage.setItem('_TOKEN', true);
+            this.props.goToPage("/dashboard")
         }
     }
 

@@ -1,0 +1,67 @@
+$color-primary: #FFFFFF;
+$color-secondary: #9D92B2; 
+
+@mixin commonProperty($bgColor) {
+    background-color: $bgColor !important;
+    border-radius: 4px !important;
+    opacity: 1;
+}
+
+@mixin commonImageProperty($imgUrl, $minHeight){
+    background-image: url($imgUrl);
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: $minHeight;
+}
+
+@mixin commonTextProperty($fontSize,$color, $letterSpacing){
+    font-size: $fontSize;
+    letter-spacing: $letterSpacing;
+    color: $color-primary;
+    opacity: 1;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.login{
+    position: absolute;
+    top: 30%;
+    right: 40%;
+    width: 20%;
+
+    &__img{
+        @include commonImageProperty('../../assets/images/login.png', 100%); 
+    }
+    
+    &__logo{
+        @include commonImageProperty('../../assets/images/login_logo.svg', 30px);
+    }
+
+    &__footerlogo{
+        @include commonImageProperty('../../assets/images/footer_login_logo.png', 30px);
+        margin-top: 55%;
+    }
+
+    &__footertext{
+        @include commonTextProperty(12px, $color-secondary, 0);
+    }
+
+    &__heading {
+        @include commonTextProperty(16px,$color-primary, 0.8px);
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    &__input{
+        @include commonProperty($color-primary)
+    }
+
+    &__btn{
+        @include commonProperty($color-secondary);
+        border-color: $color-secondary !important;
+    }
+}
+

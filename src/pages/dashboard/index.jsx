@@ -1,5 +1,6 @@
 import React from 'react';
 import DashboardView from './dashboard';
+import SeatAllocation from './seatAlocation/seatAlocation';
 
 class Dashboard extends React.Component{
     constructor(props){
@@ -11,7 +12,10 @@ class Dashboard extends React.Component{
 
     render(){
         return (
-            <DashboardView />
+            <div style={{overflowX: 'hidden'}}>
+                <DashboardView />
+                <SeatAllocation />
+            </div>
         )
     }
 }
